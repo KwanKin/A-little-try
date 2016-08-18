@@ -1,0 +1,141 @@
+img{
+	vertical-align:middle;
+}
+#mainer{
+	min-height:2000px;
+	width: 1100px;
+	margin: 0 auto;
+}
+#lside{
+    height: 2000px;
+    background-color: rgba(255,255,255,.6);
+    width: 150px;
+    
+    position: fixed;
+    top: 50px;z-index: 1;
+}
+#container{
+	height: 1500px;
+	background-color: black;
+	width: 1200px;	position: fixed;
+	z-index:1;
+}
+#rside{	
+	width: 200px;
+	height: 480px;
+ 	top: 50px;
+	background-color: rgba(255,255,255,.6)	;
+	position: fixed;
+    margin-left: 980px;
+    margin-top:20px;z-index: 4;
+}
+#tureside{
+	height: 1500px;
+	
+	width: 780px;
+    top: 50px;
+    padding-top: 55px;
+    margin: 0 auto;
+    z-index: 1;
+
+}
+.moment{
+
+	width: 750px;
+	margin: 20px auto;
+	height: 600px;
+	background-color: white;
+	
+}
+.user{
+	width: 700px;
+	margin:10px auto;
+	margin-top: 10px;height: 80px;
+}
+.facepic{
+	
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	background-color:white;
+	overflow: hidden;
+	text-align:center;  
+	display: inline-block;
+	vertical-align:middle;
+	float: left;
+
+}
+
+.user_face{
+	width: 80px;
+	margin:0 auto;
+	padding: auto auto;
+	
+}
+.close{
+	float: right;
+	width: 15px;
+	height: 15px;
+ 
+	margin-right: 5px;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	-webkit-transition-duration: 4s;
+          transition-duration: 4s;
+   -webkit-transition-timing-function: cubic-bezier(0.000, 0.105, 0.035, 1.570);
+          transition-timing-function: cubic-bezier(0.000, 0.105, 0.035, 1.570);
+}
+.close::before{
+ 	content:"";
+ 	border:2px solid rgba(200,0,0,.5);
+ 	position: absolute;
+ 	width: 10px;
+ 	top:5px;left:1px;
+ 	transform:rotate(-45deg);
+ 	
+}
+.close::after{
+ 	content:"";
+ 	border:2px solid rgba(200,0,0,.5);
+ 	position: absolute;
+ 	width: 10px;
+ 	top:5px;left:1px;
+	transform:rotate(45deg);
+	
+}
+.close:hover{
+	transform:rotate(720deg);
+    
+}
+.momentblock{
+	
+}
+.lei{
+	list-style:none;
+	display:block;
+	width: auto;
+	position: relative;
+	left: -40px;
+    height: 30px;
+    width: 150px;	
+    text-align:center;
+}
+.leibie{
+ 	height: 20px;
+ 	padding: 10px 0 10px 0;   color: #77aaaa;
+}
+.lei :hover{
+ 	background-color:rgba(255,255,255,0.6);
+ 	cursor:pointer;
+}
+.momentblock{
+	width: 700px;
+	height: 400px;
+	
+}
+.momentimg{
+	display: block;
+	width: 300px;height: 300px;
+	align:center;
+}
