@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>index</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="styles/basic.css" />
+<link rel="stylesheet" href="styles/mainer.css" />
+<script src="scripts/basic.js"></script>
+<script src="../jquery.js"></script>
+</head>
+    <body onmouseover="startTime()">
+    	<div id="header">
+        <div id="headerblur">
+    		<div id="nav"><a href="/"><span id='data'>LOAD</span> 
+                <div id="navblur">
+
+                    <ul>
+                        <div class="home"><li class="navway" ><a href="/"><span>&nbsp;&nbsp;首 页 </span><span class="fadeinbackground">&nbsp;&nbsp;</span></a></li>
+                        </div>
+                        <div class="discuss"><li class="navway" ><a href="/"><span>&nbsp;&nbsp;讨 论 区</span><span class="fadeinbackground">&nbsp;&nbsp;</span></a></li>
+                        </div>
+                        <div class="pic"><li class="navway" ><a href="/"><span>&nbsp;&nbsp;图    库 </span><span class="fadeinbackground">&nbsp;&nbsp;</span></a></li>
+                </div>   
+                    </ul>  
+                    </a>
+                
+                </div>
+
+                <div id='searchcontainer'>
+                    <form>
+                    <input type="text" class="searchbox" placeholder="search">
+                    <button type="submit" id="searchsubmit"></button>
+                    </form>
+                </div>  
+            </div>    <div class="loginway"><a href="/"><span id="loginspan"> 登 录</span></a></div><div class="loginway"><span id="time"> Time</span></div>
+    	    </div>   
+
+        </div>
+    	<div id="mainer">
+            <div id="tureside">
+                <div class="moment">
+                    <div class="user">
+                        <div class="facepic"><a href="#"><img src="images/高中.jpg" class="user_face"></a></div>
+                        <div class="close"></div>
+                    </div>
+                    <div class="momentblock"><img src="images/gakki.jpg" class="momentimg"></div>
+                   
+                    
+                </div>
+                 <div class="moment">
+                    <div class="user">
+                        <div class="facepic"><a href="#"><img src="images/高中.jpg" class="user_face"></a></div>
+                        <div class="close"></div>
+                    </div>
+                    <div class="momentblock"></div>
+                   
+                    
+                </div>
+
+            </div>
+			<div id="container">
+                <div id="lside">
+                   <div id="leip">
+                       <ul class="lei">
+                        <br /><br /><br />
+                           <li class="leibie">&nbsp;I   &nbsp; &nbsp; like</li>
+                           <li class="leibie">番  &nbsp; &nbsp;  剧</li>
+                           <li class="leibie">科   &nbsp; &nbsp; 技</li>
+                           <li class="leibie">娱   &nbsp; &nbsp; 乐</li>
+                           <li class="leibie">网   &nbsp; &nbsp; 红</li>
+                           <li class="leibie">啊   &nbsp; &nbsp; 哈</li>
+                           <li class="leibie">啊   &nbsp; &nbsp; 哈</li>
+                           <li class="leibie">啊   &nbsp; &nbsp; 哈</li>
+                           <li class="leibie">啊   &nbsp; &nbsp; 哈</li>
+                       </ul>
+                   </div>
+                </div>
+                <div id="rside">
+                    弄个框架iframe在这
+                </div>
+            </div>    		
+    	</div>
+    	<div id="footer"></div>
+    </body>
+   <script>
+    $(function(){
+        $("#data").mouseover(function(){
+             $("#navblur").toggle();
+        });
+        $("#mainer").mouseover(function(){
+            $("#navblur").hide();
+        });
+        $(".close").click(function(){
+            $(this).closest(".moment").animate({
+                width:"80px",
+                height:"80px",
+               
+            },1000).fadeOut("fast");
+        })
+    });
+
+    $(document).ready(function(){var mydate=new Date();
+    var mymonthnum=mydate.getMonth();
+    var month=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var myday=mydate.getDate();
+   
+    var houzui="th";if (myday==1) {
+        houzui="st";   
+    }else if(myday==2){houzui="nd";}else if(myday==3){houzui="rd";}else{houzui="th";};
+    var mymonth=month[mymonthnum]+"&nbsp;"+myday+houzui;
+    $("#data").html(mymonth);});
+
+  function startTime(){
+        var mydate=new Date();
+        var h=mydate.getHours();
+        var m=mydate.getMinutes();
+        var s=mydate.getSeconds();
+        m=checkTime(m);
+        s=checkTime(s);
+        var t=h+":"+m;
+        $("#time").html(t);
+        t2=setTimeout("startTime()",500);
+    }
+
+    function checkTime(i){
+        if (i<10) 
+            {i="0" + i} 
+         return i
+        }
+    </script>
+</html>
